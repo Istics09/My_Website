@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ménes</title>
+    <link rel="icon" type="image/x-icon" href="/Logo/Logo (1).png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .NavBar {
+            background-color: transparent;
+            overflow: hidden;
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+            top: 0%;
+            position: absolute;
+            padding-left: 10%;
+        }
+
+        .NavBar a {
+            display: inline-block;
+            font-family: "Lucida Console", "Courier New", monospace;
+            padding: 0 50px;
+            color: aqua;
+        }
+
+        .NavBar a:hover {
+            background-color: white;
+            color: gold;
+            text-decoration: underline;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            size: 50%;
+        }
+
+        .NavBar i {
+            padding: 0 10px;
+        }
+
+        .Icon img {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            top: 0;
+            opacity: 0.6;
+        }
+
+        .Card-Container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 100px;
+        }
+
+
+        .Name {
+            padding: 2px 16px;
+            color: grey;
+        }
+
+        .Card_Zora, .Card_Ricsi, .Card_Bandi {
+            box-shadow: 0 4px 8px 0 rgba(185, 185, 185, 0.2);
+            transition: 0.3s;
+            width: 250px;
+            height: 520px;
+            border: 1 solid white;
+            margin: 50px;
+            background-color: grey;
+            border-radius: 15px;
+            color: black;
+        }
+
+        .Card_Zora:hover, .Card_Ricsi:hover, .Card_Bandi:hover {
+            box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+            color: grey;
+        }
+
+
+        .body,
+        html {
+            height: 100%;
+            margin: 0;
+            overflow-y: hidden;
+            /* Ezzel eltávolítod a függőleges gördítőcsíkot */
+        }
+
+        .BG {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .BG img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .Card-Container h4, p{
+            text-align: center;
+            color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="BG">
+        <img src="Profiles/BG.jpg" alt="">
+    </div>
+    <div class="NavBar">
+        <a href="staff.html"><i class="fa-solid fa-user"></i>Mink</a>
+        <a href="menes.html"><i class="fa-solid fa-horse-head"></i>Ménes</a>
+        <a href="#"><i class="fa-solid fa-question"></i>Gyakori kérdések</a>
+        <a href="#"><i class="fa-regular fa-envelope"></i>Elérhetőségeink</a>
+        <a href="#"><i class="fa-solid fa-image"></i>Emlékeink</a>
+    </div>
+    <div class="Icon">
+        <a href="index.html"><img src="Logo/ICON.png"></a>
+    </div>
+    <div class="Card-Container">
+        <div class="Card_Bandi">
+            <img src="Photos/2.jpg" style="width: 250px; height: 250px; border-radius: 15px;">
+            <div class="Name">
+                <h4><b>Bandi</b></h4>
+                <p>Bandi, a 15 éves szürke herélt póni, akit minden gyerek imád a lovas táborokban, nem csak a
+                    kedvencünk,
+                    de vele fedezzük fel a terepet is; nyugodt természete ellenére 140 cm-ben parádézik</p>
+            </div>
+        </div>
+        <div class="Card_Zora">
+            <img src="Photos/11.jpg" style="width: 250px; height: 250px; border-radius: 15px;">
+            <div class="Name">
+                <h4><b>Zora</b></h4>
+                <p>Zora, a ragyogóan sárga, 3 éves kanca csikó nem csak a méretével tűnik ki. Bár jelenleg 140 cm magas,
+                    még
+                    növésben van. Habár kis szeleburdi természetű, Zora szíve jóindulatú. Már javában zajlik a
+                    belovaglása,
+                    és nagyon ígéretesnek tűnik az előtte álló jövő</p>
+            </div>
+        </div>
+        <div class="Card_Zora">
+            <img src="Photos/8.jpg" style="width: 250px; height: 250px; border-radius: 15px;">
+            <div class="Name">
+                <h4><b>Ricsi</b></h4>
+                <p>Ricsi, a 16 éves foltos sportpony, aki egykor a versenypályák csillaga volt. Most a fiatal lovasok
+                    oktatásában vesz részt. Bár 130 cm magasságával nem a legnagyobb, temperamentumával és
+                    szenvedélyével
+                    bizonyára kitűnik a többiek közül.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

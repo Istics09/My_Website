@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <title>Pallagi Lovasok</title>
+    <link rel="icon" type="image/x-icon" href="/Logo/Logo (1).png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            z-index: -100;
+            background-color: grey;
+        }
+
+        .NavBar {
+            background-color: transparent;
+            overflow: hidden;
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+            top: 0%;
+            position: absolute;
+            padding-left: 10%;
+        }
+
+        .NavBar a {
+            display: inline-block;
+            font-family: "Lucida Console", "Courier New", monospace;
+            padding: 0 50px;
+            color: aqua;
+        }
+
+        .NavBar a:hover {
+            background-color: black;
+            color: gold;
+            text-decoration: underline;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            size: 50%;
+        }
+
+        .NavBar i {
+            padding: 0 10px;
+        }
+
+        #BG-video {
+            position: fixed;
+            z-index: 0;
+            background-size: cover;
+            width: 100%;
+            height: auto;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        .Icon img {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            top: 0;
+        }
+
+        #video-container {
+            height: 800px;
+            /* vagy bármelyik kívánt magasság */
+            overflow: hidden;
+            position: relative;
+            padding-top: 0%;
+        }
+
+        #BG-video {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #video-container h1 {
+            background-color: transparent;
+            color: white;
+            text-align: center;
+            top: 50%;
+            position: absolute;
+            padding-left: 32%;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        }
+
+        .Welcome .Bemutato h1 {
+            text-align: center;
+            text-decoration: underline;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .Welcome .Bemutato p {
+            text-align: center;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Arial", sans-serif;
+            color: gold;
+            text-align: center;
+        }
+
+        p,
+        ul {
+            font-family: "Arial", sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            font-weight: bold;
+        }
+
+        .season {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            float: left;
+            /* Egymás mellett helyezzük őket el */
+            width: 24%;
+            /* Négy évszak van, tehát 25% - 1% padding = 24% */
+            margin: 0.5%;
+            /* Kis térköz közöttük */
+            position: relative;
+            /* Ezt azért állítjuk be, hogy a háttérkép itt legyen pozicionálva */
+            overflow: hidden;
+            /* A háttérképnek ne legyenek túllógó részei */
+            cursor: pointer;
+            /* Az egérmutató legyen kattintásra utaló */
+            transition: opacity 0.3s;
+        }
+
+        .season::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+            opacity: 0.7;
+            z-index: -1;
+            transition: opacity 0.3s;
+        }
+
+        .Tavasz::before {
+            background-image: url(Seasons/Tavasz.jpg);
+        }
+
+        .Nyar::before {
+            background-image: url(Seasons/nyar.jpg);
+        }
+
+        .Osz::before {
+            background-image: url(Seasons/osz.jpg);
+        }
+
+        .Tel::before {
+            background-image: url(Seasons/tel.jpg);
+        }
+
+        .season:hover::before {
+            opacity: 0.2;
+        }
+
+        .season:hover {
+            transform: scale(1.1);
+        }
+
+        .season:hover h3 .season:hover ul {
+            opacity: 0.3;
+        }
+
+        .Text {
+            position: absolute;
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="video-container">
+        <video id="BG-video" autoplay muted loop playsinline>
+            <source src="Video/production_id_5205906 (1080p).mp4" type="video/mp4">
+        </video>
+        <h1>Üdvözlünk a Pallagi Lovasok hivatalos oldalán!</h1>
+    </div>
+    <div class="NavBar">
+        <a href="staff.html"><i class="fa-solid fa-user"></i>Mink</a>
+        <a href="menes.html"><i class="fa-solid fa-horse-head"></i>Ménes</a>
+        <a href="#"><i class="fa-solid fa-question"></i>Gyakori kérdések</a>
+        <a href="#"><i class="fa-regular fa-envelope"></i>Elérhetőségeink</a>
+        <a href="#"><i class="fa-solid fa-image"></i>Emlékeink</a>
+    </div>
+
+    <div class="Icon">
+        <a href="index.html"><img src="Logo/ICON.png"></a>
+    </div>
+
+    <div class="Welcome">
+        <div class="Bemutato">
+            <h1>Üdvözlünk a Pallagi Lovasok kalandos világában!</h1>
+            <p style="font-size: 19px;">Merülj el a lovas élményekben, akár kezdőként, akár tapasztalt lovasként. Hatalmas hangsúlyt helyezünk a
+                lovas tudás alapjaira, garantálva, hogy minden lovaglás felejthetetlen legyen. Kínálatunk széles
+                palettáján válogathatsz: kicsiknek szóló varázslatos lovaglás, dinamikus futószáras oktatás, intenzív
+                egyéni lovaglás, csoportos lovaglás, izgalmas ugróedzés és lélegzetelállító tereplovaglás.
+                De nem csak itt találkozhatsz velünk! Rendszeresen részt veszünk különféle rendezvényeken, ahol élőben
+                is megtapasztalhatod az igazi <strong>Pallagi Lovasok hangulatot.</strong></p>
+        </div>
+        <h1 style="text-decoration: underline;">Évszakonkénti Kalandjaink</h1>
+        <p>Minden évszakban különleges programokkal várunk a táborainkban. Csatlakozz hozzánk és élvezd a változatos
+            élményeket:</p>
+        <div class="season Tavasz">
+            <h3>🌸 Tavasz:🌸</h3>
+            <ul>
+                <li>🥚 Művészi tojásfestés🥚</li>
+                <li>🔍 Húsvéti tojáskeresési kihívás🔍</li>
+                <li>🎮 Vidám ügyességi játékok🎮</li>
+                <li>🎨 Kreatív alkotó műhelyek🎨</li>
+            </ul>
+        </div>
+        <div class="season Nyar">
+            <h3>☀ Nyár:☀</h3>
+            <ul>
+                <li>🐴 Frissítő lófürdetés (időjárásfüggő)🐴</li>
+                <li>🎨 Lóra szabott festési élmény🎨</li>
+                <li>🐎 Szabadon az idomításban🐎</li>
+                <li>🍪 Lovas süteménykészítés🍪</li>
+                <li>🌱 Bűvös gyógynövénytanosító🌱</li>
+                <li>🐴 Varázslatos lovas játékok🐴</li>
+                <li>🏆 Izgalmas ügyességi verseny🏆</li>
+                <li>🎨 Arcfestés a nagy napra🎨</li>
+                <li>🍭 Házikészítésű vattacukor🍭</li>
+                <li>✨ Csillámló tetkó alkotás✨</li>
+            </ul>
+        </div>
+        <div class="season Osz">
+            <h3>🍁 Ősz:🍁</h3>
+            <ul>
+                <li>🎃 Kreatív tökfaragás🎃</li>
+                <li>🐴 Ló jelmezbemutató🐴</li>
+                <li>🎨 Művészi lófestés🎨</li>
+                <li>🎨 Őszi hangulatú arcfestés🎨</li>
+                <li>🎨 Alkotói kreatív műhely🎨</li>
+            </ul>
+        </div>
+        <div class="season Tel">
+            <h3 >❄ Tél:❄</h3>
+            <ul>
+                <li>🐴 Varázslatos téli lovaglás🐴</li>
+                <li>🎮 Téli ügyességi játékok🎮</li>
+                <li>🎨 Kreatív alkotások a hidegben🎨</li>
+                <li>🐴 Szeretetteljes lóápolás🐴</li>
+                <li>🛷 Hóban szánkózás (időjárásfüggő)🛷</li>
+                <li>⛄ Hóemberépítési kihívás (időjárásfüggő)⛄</li>
+                <li>🎄 Ünnepi készülődés🎄</li>
+                <li>🌲 Karácsonyfa díszítő műhely🌲</li>
+                <li>✨ Ragyogó dekorálási trükkök✨</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
